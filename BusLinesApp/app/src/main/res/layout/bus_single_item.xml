@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/busInfoLinearLayout">
+
+    <LinearLayout
+        android:id="@+id/busLinearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/busLinearLayout"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/carNameItem"
+            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="汽车名"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="@drawable/text_view_border2"
+            android:textColor="#666666"/>
+        <TextView
+            android:id="@+id/carTypeItem"
+            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="汽车类型"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="@drawable/text_view_border2"
+            android:textColor="#666666"/>
+        <TextView
+            android:id="@+id/leaveTimeItem"
+            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="出发时间"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="@drawable/text_view_border2"
+            android:textColor="#666666"/>
+    </LinearLayout>
+</LinearLayout>

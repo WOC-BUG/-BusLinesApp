@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/bus_search_text_border"
+        android:elevation="20dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="添加车站:"
+            style="@style/adverbContentTextSize"
+            android:textColor="@color/white"
+            android:background="@drawable/command_border_green"/>
+
+        <!--上分隔线-->
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="5px"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/lightGray"
+            android:layout_below="@+id/title" />
+
+        <TableLayout
+            android:id="@+id/editLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line1"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_border">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+
+                        android:text="车站名称:"
+                        android:drawableStart="@mipmap/asterisk"
+                        android:textColor="@color/colorPrimary"/></LinearLayout>
+                <com.example.buslinesapp.utils.ClearableEditText
+                    android:id="@+id/input1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@null"
+
+                    android:hint="请输入车站名"
+                    style="@style/adverbContentTextSize"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/text_border">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="车站简称:"
+                    android:textColor="@color/colorPrimary"/>
+                <com.example.buslinesapp.utils.ClearableEditText
+                    android:id="@+id/input2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@null"
+
+                    android:hint="请输入车站简称"
+                    style="@style/adverbContentTextSize"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black" />
+            </TableRow>
+        </TableLayout>
+        <!--下分隔线-->
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="5px"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/lightGray"
+            android:layout_below="@+id/editLayout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line2"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@id/line2"
+                android:background="@drawable/button_style"
+                android:text="提交"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/clearBtn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="50dp"
+                android:layout_below="@id/line2"
+                android:background="@drawable/red_button"
+                android:text="清除"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/advertisement"/>
+
+</LinearLayout>

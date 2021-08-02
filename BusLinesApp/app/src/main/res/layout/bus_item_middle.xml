@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/busItemMiddleLinearLayout"
+    android:orientation="horizontal" >
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line">
+        <Button
+            android:id="@+id/stationBusNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bus_border"
+            android:text="乘坐72路" />
+
+        <RelativeLayout
+            android:id="@+id/route"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:layout_below="@+id/stationBusNumber">
+
+            <TextView
+                android:id="@+id/firstStation"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:background="@drawable/orange_box"
+                android:text="大望路站"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/iconTriangle"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/firstStation"
+                android:background="@mipmap/icon_triangle" />
+
+            <TextView
+                android:id="@+id/middleStation"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/iconTriangle"
+                android:gravity="center"
+                android:text="四惠东站"
+                android:background="@drawable/orange_box"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/iconTriangle2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/middleStation"
+                android:background="@mipmap/icon_triangle" />
+
+            <TextView
+                android:id="@+id/lastStation"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/iconTriangle2"
+                android:background="@drawable/orange_box"
+                android:gravity="center"
+                android:text="传媒大学站"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/route">
+
+            <LinearLayout
+                android:id="@+id/busLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/carName"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="汽车名"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:background="@drawable/text_view_border"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/carType"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="汽车类型"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:background="@drawable/text_view_border"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/arriveTime"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="到站时间"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:background="@drawable/text_view_border"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/busLinearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/busLinearLayout"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/carNameItem"
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="汽车名"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:background="@drawable/text_view_border2"
+                    android:textColor="#666666"/>
+                <TextView
+                    android:id="@+id/carTypeItem"
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="汽车类型"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:background="@drawable/text_view_border2"
+                    android:textColor="#666666"/>
+                <TextView
+                    android:id="@+id/arriveTimeItem"
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="到站时间"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:background="@drawable/text_view_border2"
+                    android:textColor="#666666"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

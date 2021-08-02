@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto">
+
+
+    <!--自定义的RadioButton单选按钮组-->
+    <info.hoang8f.android.segmented.SegmentedGroup
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/segmentedGroup"
+
+        segmentedgroup:sc_border_width="1dp"
+        segmentedgroup:sc_corner_radius="10dp"
+        segmentedgroup:sc_checked_text_color="@color/white"
+        segmentedgroup:sc_tint_color="@color/colorPrimary">
+
+        <RadioButton
+            android:id="@+id/leftButton"
+            style="@style/RadioButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="车站信息添加"
+            android:textSize="17sp"/>
+        <RadioButton
+            android:id="@+id/rightButton"
+            style="@style/RadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="车次信息添加"
+            android:textSize="17sp"/>
+
+    </info.hoang8f.android.segmented.SegmentedGroup>
+
+
+<!--    加载不同的fragment-->
+    <FrameLayout
+        android:id="@+id/addFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/segmentedGroup"
+        android:layout_above="@id/bottomSpaceView">
+    </FrameLayout>
+
+    <!--    底部导航栏留白-->
+    <LinearLayout
+        android:id="@+id/bottomSpaceView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/lightGray"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" />
+
+</RelativeLayout>

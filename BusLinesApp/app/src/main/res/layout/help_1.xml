@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#1ABC9C">
+<!--        <ImageButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@null"-->
+<!--            android:src="@drawable/back"-->
+<!--            >-->
+<!--        </ImageButton>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="帮助"
+            android:textSize="23dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="站站查询功能介绍"
+            android:background="@color/white"
+            android:gravity="center"
+            android:textSize="23dp"
+            android:textColor="@color/black"
+            ></TextView>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="\n第一步：轻触【查询】-选择第二列【站站查询】;\n
+第二步：在页面上方的输入框中输入起始车站与终点车站，点击右侧绿色【站站查询】按钮即可对站站关系进行查询。
+"></TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:id="@+id/like_button"
+        android:background="@drawable/button_name"
+        android:layout_centerHorizontal="true"
+        ></Button>
+        <Button
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/unlike_button"
+            android:background="@drawable/button_name_1"
+            android:layout_centerHorizontal="true"></Button>
+
+
+    </LinearLayout>
+</LinearLayout>

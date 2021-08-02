@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="top"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:text="添加车次:"
+
+                style="@style/adverbContentTextSize"
+                android:textColor="@color/white"
+                android:background="@drawable/command_border_green"/>
+
+            <!--上分隔线-->
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/lightGray"
+                android:layout_below="@+id/title" />
+
+            <TableLayout
+                android:id="@+id/editArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line1"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/text_border">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+
+                            android:text="车次名称:"
+                            android:drawableStart="@mipmap/asterisk"
+                            android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+
+                    <com.example.buslinesapp.utils.ClearableEditText
+                        android:id="@+id/inputBox1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@null"
+
+                        android:hint="请输入汽车名"
+                        style="@style/adverbContentTextSize"
+                        android:padding="5dp"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/text_border">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text="汽车类型:"
+                        android:textColor="@color/colorPrimary"/>
+                    <com.example.buslinesapp.utils.ClearableEditText
+                        android:id="@+id/inputBox2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@null"
+
+                        android:hint="请输入汽车类型"
+                        style="@style/adverbContentTextSize"
+                        android:padding="5dp"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        tools:ignore="MissingClass" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/text_border">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+
+                            android:text="起点站:"
+                            android:drawableStart="@mipmap/asterisk"
+                            android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+
+                    <com.example.buslinesapp.utils.ClearableEditText
+                        android:id="@+id/inputBox3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@null"
+
+                        android:hint="请输入始发站"
+                        style="@style/adverbContentTextSize"
+                        android:padding="5dp"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@color/black" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/text_border">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+
+                            android:text="终点站:"
+                            android:drawableStart="@mipmap/asterisk"
+                            android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+                    <com.example.buslinesapp.utils.ClearableEditText
+                        android:id="@+id/inputBox4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@null"
+
+                        android:hint="请输入终点站"
+                        style="@style/adverbContentTextSize"
+                        android:padding="5dp"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@color/black" />
+                </TableRow>
+
+            </TableLayout>
+
+            <!--下分隔线-->
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/lightGray"
+                android:layout_below="@+id/editArea" />
+
+            <LinearLayout
+                android:id="@+id/nextBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:layout_below="@id/line2"
+                android:background="@drawable/button_style">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="下一步"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="(添加线路站点信息)"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    tools:ignore="SmallSp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <include layout="@layout/advertisement"/>
+
+</LinearLayout>

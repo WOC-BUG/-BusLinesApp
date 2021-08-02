@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#1ABC9C">
+<!--        <ImageButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@null"-->
+<!--            android:src="@drawable/back"-->
+<!--            >-->
+<!--        </ImageButton>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="帮助"
+            android:textSize="23dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="站次添加功能介绍"
+            android:background="@color/white"
+            android:gravity="center"
+            android:textSize="23dp"
+            android:textColor="@color/black"
+            ></TextView>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="\n第一步：轻触【添加】-选择第二列【车站信息添加】；\n第二步：在上半页面【车次信息添加】栏显示的四个输入框中分别输入需要添加的车次信息，点击下方绿色【下一步】按钮完成添加新的车次信息；\n完成车次信息添加后，必须选择已有的车站补充新车次与已有车站的关系；\n第三步：在下半页面【车次信息添加】栏中，选择车次的上下行方向，补充完整起点车站的出发时间与终点车站的到站时间；\n第四步：当需要在首末车站添加经停车站时，点击正下方绿色【+】按钮，在弹出的新输入版中根据提示的信息添加新的车站名与出入站时间；\n第五步：如果需要删除已有的的车站车次关系信息点击相关的输入框进行清除即可\n第六步：在页面显示的输入框中分别输入需要添加的车站信息，点击左下方绿色【提交】按钮即可完成添加新的车站信息；"></TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/like_button"
+            android:background="@drawable/button_name"
+            android:layout_centerHorizontal="true"></Button>
+        <Button
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/unlike_button"
+            android:background="@drawable/button_name_1"
+            android:layout_centerHorizontal="true"></Button>
+
+
+    </LinearLayout>
+</LinearLayout>

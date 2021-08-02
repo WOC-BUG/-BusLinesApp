@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">传媒公交助手</string>
+    <string name="map">首页</string>
+    <string name="query">查询</string>
+    <string name="add">添加</string>
+    <string name="home">我的</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tips">说明：1、若反向行驶车次已存在，则无需用户选择方向(系统判断)\n \t\t\t2、中间表单只需填写中途站点,不含始发和终点；逐个进行添加</string>
+
+</resources>

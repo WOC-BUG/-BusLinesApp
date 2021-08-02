@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lightGray">
+
+    <!--车站搜索-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/bus_search_text_border"
+        android:elevation="20dp">
+
+        <LinearLayout
+            android:id="@+id/queryLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/bus_search_border">
+
+
+            <EditText
+                android:id="@+id/searchStationTextview"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="50"
+                android:background="@null"
+                android:textSize="17sp"
+                android:hint="输入起始站/终点站" />
+
+            <Button
+                android:id="@+id/search"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/search_button"
+                android:text="起止站搜索"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/queryLinearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:background="@drawable/bus_search_border">
+
+
+            <EditText
+                android:id="@+id/searchStationTextview2"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:textSize="17sp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="50"
+                android:background="@null"
+                android:hint="输入中转站" />
+
+            <Button
+                android:id="@+id/search2"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/search_button"
+                android:text="中转站搜索"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

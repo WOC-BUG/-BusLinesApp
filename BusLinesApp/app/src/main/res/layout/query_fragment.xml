@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto">
+
+<!--
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:text="信息查询"
+        android:layout_weight="9"
+        android:background="@color/colorPrimary"/>
+
+
+    </LinearLayout>
+-->
+    <!--自定义的RadioButton单选按钮组-->
+    <info.hoang8f.android.segmented.SegmentedGroup
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/segmentedGroup"
+
+        segmentedgroup:sc_border_width="1dp"
+        segmentedgroup:sc_corner_radius="10dp"
+        segmentedgroup:sc_checked_text_color="@color/white"
+        segmentedgroup:sc_tint_color="@color/colorPrimary">
+
+        <RadioButton
+            android:id="@+id/busQuery"
+            style="@style/RadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onclick"
+            android:text="车次查询"
+            android:textSize="17sp"/>
+        <RadioButton
+            android:id="@+id/stationToStationQuery"
+            style="@style/RadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onclick"
+            android:text="站站查询"
+            android:textSize="17sp"/>
+        <RadioButton
+            android:id="@+id/stationQuery"
+            style="@style/RadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onclick"
+            android:text="站次查询"
+            android:textSize="17sp"/>
+
+    </info.hoang8f.android.segmented.SegmentedGroup>
+    <!--
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:button="@null"
+            android:id="@+id/busQuery"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/main_search_text_border"
+            android:onClick="onclick"
+            android:text="      车次查询"
+            android:textColor="@drawable/change_button_color"
+            android:checked="true"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:button="@null"
+            android:id="@+id/stationToStationQuery"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/main_search_text_border"
+            android:onClick="onclick"
+            android:text="      站站查询"
+            android:textColor="@color/colorPrimary"
+            android:layout_weight="1" />
+
+
+        <RadioButton
+            android:button="@null"
+            android:id="@+id/stationQuery"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/main_search_text_border"
+            android:onClick="onclick"
+            android:text="      站次查询"
+            android:textColor="@color/colorPrimary"
+            android:layout_weight="1" />
+
+
+    </RadioGroup>
+    -->
+
+    <!--    加载不同的fragment-->
+    <FrameLayout
+        android:id="@+id/queryFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/segmentedGroup"
+        android:layout_above="@id/bottomSpaceView">
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bottomSpaceView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/lightGray"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" />
+
+
+</RelativeLayout>

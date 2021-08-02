@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/busLineItemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--第二站-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/linearLayoutBtn">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iconMiddle"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/icon_middle" />
+
+            <TextView
+                android:id="@+id/stationName"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayoutBtn"
+                android:layout_marginLeft="10dp"
+                android:text="null"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/stationArriavalTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:text="10:00"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/stationLeaveTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:text="12:00"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:gravity="center">-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iconMiddle"-->
+<!--        android:layout_width="30dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:background="@mipmap/icon_middle" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/stationName"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_toRightOf="@id/iconMiddle"-->
+<!--        android:text="四惠站"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="12sp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/stationArriavalTime"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginRight="25dp"-->
+<!--        android:text="10:00"-->
+<!--        android:textSize="10sp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/stationLeaveTime"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_toRightOf="@+id/stationArriavalTime"-->
+<!--        android:text="12:00"-->
+<!--        android:textSize="10sp" />-->
+<!--    </LinearLayout>-->
+
+</LinearLayout>

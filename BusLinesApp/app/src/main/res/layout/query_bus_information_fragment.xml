@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/bus_search_text_border"
+        android:elevation="20dp">
+
+        <RelativeLayout
+            android:id="@+id/busStartLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/busNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bus_number_button"
+                android:text="92路"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/busNumber"
+                android:text="车次信息:"
+                android:textColor="@color/black" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="fill_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/busNumber"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/deepGray" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/line">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/arrived"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/bus_arrived_button"
+                    android:text="到站"
+                    android:textColor="@color/white"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/leave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line"
+                    android:layout_toRightOf="@+id/arrived"
+                    android:background="@drawable/command_border"
+                    android:text="出站"
+                    android:textColor="@color/white"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+
+            <!--起始站-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:layout_below="@+id/linearLayoutBtn">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/iconTop"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@mipmap/icon_top" />
+
+                    <TextView
+                        android:id="@+id/stationStart"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/linearLayoutBtn"
+                        android:layout_marginLeft="10dp"
+                        android:text="null"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/stationStartArrivalTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="25dp"
+                    android:text="10:00"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/stationStartLeaveTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:text="12:00"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/busLineRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/busStartLayout"
+            android:layout_marginRight="10dp"/>
+
+        <!--终点站-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:layout_below="@+id/linearLayoutBtn">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iconBottom"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@mipmap/icon_bottom" />
+
+                <TextView
+                    android:id="@+id/stationOver"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearLayoutBtn"
+                    android:layout_marginLeft="10dp"
+                    android:text="null"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/stationOverArrivalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="45dp"
+                android:text="10:00"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/stationOverLeaveTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:text=""
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iconBottom"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/gray_border"
+            android:orientation="horizontal">
+            <!--一些信息-->
+            <TextView
+                android:id="@+id/busInformation"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:text="92路 (约五分钟一趟)"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="车次详情"
+                android:textColor="@color/orange"
+                android:textSize="10sp" />
+
+            <ImageButton
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:background="@mipmap/icon_orange_triangle" />
+
+        </LinearLayout>
+
+        <!--表头-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+        <LinearLayout
+            android:id="@+id/busLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/carName"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="汽车名"
+                android:gravity="center"
+                android:padding="10dp"
+                android:background="@drawable/text_view_border"
+                android:textColor="@color/white"/>
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/carType"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="汽车类型"
+                android:gravity="center"
+                android:padding="10dp"
+                android:background="@drawable/text_view_border"
+                android:textColor="@color/white"/>
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/arriveTime"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="到站时间"
+                android:gravity="center"
+                android:padding="10dp"
+                android:background="@drawable/text_view_border"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/busInfoRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/busLinearLayout"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--    底部导航栏留白-->
+    <LinearLayout
+        android:id="@+id/bottomSpaceView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/lightGray"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" />
+
+</LinearLayout>

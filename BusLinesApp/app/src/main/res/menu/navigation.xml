@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--    android:icon设置图标-->
+    <item
+        android:id="@+id/map"
+        android:icon="@mipmap/home"
+        android:title="@string/map"/>
+
+   <item
+        android:id="@+id/add"
+       android:icon="@mipmap/add"
+        android:title="@string/add"/>
+
+    <item
+        android:id="@+id/query"
+        android:icon="@mipmap/search"
+        android:title="@string/query"/>
+
+    <item
+        android:id="@+id/home"
+        android:icon="@mipmap/my"
+        android:title="@string/home"/>
+</menu>

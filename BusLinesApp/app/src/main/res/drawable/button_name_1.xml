@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--    未解决的变化-->
+
+    <!--    点击时-->
+    <item android:drawable="@drawable/undo_af" android:state_pressed="true"></item>
+
+
+    <!--    未点击时-->
+    <item android:drawable="@drawable/undo_be"></item>
+</selector>
